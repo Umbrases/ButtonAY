@@ -19,6 +19,9 @@ BX.ready(function(){
                         events: {
                             click: function(){
                                 BX.ajax.post('url' + task_id + '&data[FIELDS_AFTER][USER_ID]=' + user_id);
+
+                                self.innerHTML = 'Наблюдатели добавлены';
+					            location.reload();
                             }
                         },
                         html: '<span class="btn-synccloudtobox-loader"></span>Добавить АУ'
